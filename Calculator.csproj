@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+    <NoWin32Manifest>true</NoWin32Manifest>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="fonts\Minecraftia.ttf" />
+    <None Remove="images\bg.png" />
+    <None Remove="images\close.png" />
+    <None Remove="images\icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Costura.Fody" Version="5.1.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>compile; runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Fody" Version="6.4.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>compile; runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Resource Include="fonts\Minecraftia.ttf" />
+    <Resource Include="images\bg.png" />
+    <Resource Include="images\close.png" />
+    <Resource Include="images\icon.png" />
+  </ItemGroup>
+
+</Project>
